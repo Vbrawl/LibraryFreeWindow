@@ -21,13 +21,13 @@ public:
 #endif
 
 /* Platform-specific variables */
-private:
+protected:
 #ifdef _WIN32
 	HWND m_winHandle;
 #endif
 
 /* Variables */
-private:
+protected:
 	EventLoop& m_eventLoop;
 
 
