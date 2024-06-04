@@ -48,7 +48,7 @@ Window::Window(EventLoop& loop, int width, int height, bool global) : m_eventLoo
 	this->m_winHandle = CreateWindowW(
 		LFW_DEFAULT_WINDOW_CLASS,
 		TEXT("Main Window"),
-		(global ? CS_GLOBALCLASS : 0) | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_SIZEBOX,
+		(global ? CS_GLOBALCLASS : 0) | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_SIZEBOX | WS_VISIBLE,
 		CW_USEDEFAULT,
 		CW_USEDEFAULT,
 		width,
@@ -64,7 +64,6 @@ Window::Window(EventLoop& loop, int width, int height, bool global) : m_eventLoo
 	}
 	else {
 		SetWindowLongPtrW(this->m_winHandle, GWLP_USERDATA, (LONG_PTR)this);
-		ShowWindow(this->m_winHandle, SW_SHOW);
 	}
 }
 
