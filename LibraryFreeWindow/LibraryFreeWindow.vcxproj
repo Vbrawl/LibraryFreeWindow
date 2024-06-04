@@ -141,10 +141,12 @@
   <ItemGroup>
     <ClCompile Include="EventLoop.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EventLoop.h" />
+    <ClInclude Include="MainWindow.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
