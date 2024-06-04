@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <memory>
 #include "Window.h"
+#include "MainWindow.h"
 #include "EventLoop.h"
 
 using std::make_shared;
@@ -10,7 +11,7 @@ int CALLBACK WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE prevhinstance,
 
 	Window::initialize();
 
-	auto win = make_shared<Window>(loop, 1280, 720, true);
+	auto win = make_shared<MainWindow>(loop);
 	loop.AddEventProcessor(win);
 
 	loop.Start();
